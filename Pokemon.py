@@ -130,7 +130,8 @@ class Pokemon:
             nom_attaque = "Flammèche"
         else:
             nom_attaque = "Feuillage"
-        print(f"{self.__nom} utilise {nom_attaque} !")
+        print(f"{self.__nom} utilise {self.get_capacite()[0].get_nom()} !")
+        #print(f"{self.__nom} utilise {nom_attaque} !")
         
         # stocke les dégâts qui seront infligés selon les types et les faiblesses
         degats = self.__atk // pokemon2.get_defense()

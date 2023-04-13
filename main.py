@@ -65,14 +65,19 @@ def combat(dresseur1 : Dresseur, dresseur2 : Dresseur) -> None:
 
 
 evoli = Pokemon("Évoli", 300, random.randint(49,61), random.randint(10, 20), 0)
+evoli.ajouter_capacite(capacite=Capacite("Charge",10,10,10,0))
+print(evoli.get_capacite()[0].get_nom())
 carapuce = PokemonEau("Carapuce", 300, random.randint(49,61), random.randint(10, 20), random.randint(45,65))
 salameche = PokemonFeu("Salamèche", 300, random.randint(49,61), random.randint(10, 20),10)
+salameche.ajouter_capacite(capacite=Capacite("Flamèche",20,10,20,0))
 bulbizarre = PokemonPlante("Bulbizarre", 300, random.randint(49,61), random.randint(10, 20), random.randint(45,65))
 mysterbe = PokemonPlante("Mysterbe", 300, random.randint(49,61), random.randint(10, 20), random.randint(45,65))
 
 
-liste_poke1 = [evoli, carapuce]
-liste_poke2 = [salameche, mysterbe]
+# liste_poke1 = [evoli, carapuce]
+# liste_poke2 = [salameche, mysterbe]
+liste_poke1 = [evoli]
+liste_poke2 = [salameche]
 # création des dresseurs
 liste_dresseur = ["Lorgane la Jeune Sportive", "Kendall le Gamin", "Lumi la Petite", "Guylain le Dresseur en Herbe", "Samia la Prof", "Tili le Dresseur", "Adelaïde la Fillette", "Sbire de la Team Rocket", "Althéo le Capitaine", "Kala le Canon", "Ikue l'Éleveuse", "Léonard le Gentleman", "Yoshio l'Employé", "James de la team Rocket", "Jeff le Petit", "Ayumi la Randonneuse", "Vijay l'Éleveur", "Fedra la Petite", "Chaz le Topdresseur", "Pectorius le Doyen", "Henri le Groom", "Alexis le Vacancier", "Gibus le Cuisinier", "Jessie de la Team Rocket"]
 dresseur1 = Dresseur(liste_dresseur[random.randint(0,len(liste_dresseur)-1)], liste_poke1)
@@ -103,5 +108,5 @@ salameche = PokemonFeu("Salamèche", 300, random.randint(49,61), random.randint(
 bulbizarre = PokemonPlante("Bulbizarre", 300, random.randint(49,61), random.randint(10, 20), random.randint(45,65))
 liste_pokemon = [evoli, carapuce, salameche, bulbizarre]
 
-#combat(dresseur1, dresseur2)
+combat(dresseur1, dresseur2)
 #combat(dresseur1, dresseur2, liste_pokemon[random.randint(0,len(liste_pokemon)-1)], liste_pokemon[random.randint(0,len(liste_pokemon)-1)])
